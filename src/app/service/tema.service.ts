@@ -11,6 +11,7 @@ export class TemaService {
 
   constructor(private http: HttpClient) { }
 
+
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
@@ -34,4 +35,5 @@ export class TemaService {
   deleteTema(id: number){
     return this.http.delete(`https://bprss.herokuapp.com/tema/${id}`, this.token)
   }
+
 }
